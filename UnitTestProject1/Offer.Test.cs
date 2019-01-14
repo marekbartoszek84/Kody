@@ -47,5 +47,15 @@ namespace UnitTestProject1
             var result = chart.Evaluate(offer).Result;
             Assert.AreEqual(OfferResult.GoodOffer, result);
         }
+        [TestMethod]
+        public void OfferPriceIsLessThanZeroTest()
+        {
+            var chart = new OfferFlowchart();
+            var fixture = new Fixture();
+            Offer offer = fixture.Create<Offer>();
+            offer.Price =-12;
+            var result = chart.Evaluate(offer).Result;
+            Assert.AreEqual(OfferResult.NotChange, result);
+        }
     }
 }

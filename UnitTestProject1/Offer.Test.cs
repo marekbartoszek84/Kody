@@ -43,7 +43,7 @@ namespace UnitTestProject1
             var chart = new OfferFlowchart();
             var fixture = new Fixture();
             Offer offer = fixture.Create<Offer>();
-            offer.Price = 10;
+            offer.Price = 101;
             var result = chart.Evaluate(offer).Result;
             Assert.AreEqual(OfferResult.GoodOffer, result);
         }

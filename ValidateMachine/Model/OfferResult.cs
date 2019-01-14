@@ -8,6 +8,7 @@ namespace ValidateMachine.Model
     {
         NotChange,
         NotEnoughInformation,
+        MoreData,
         GoodOffer,
         BadOffer
     }

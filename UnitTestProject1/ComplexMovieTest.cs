@@ -23,7 +23,7 @@ namespace UnitTestProject1
             var movie = new Movie { Name = "Test", Length=715, ReleaseDate = new DateTime(2099,11,2)};
             var result = chart.Evaluate(movie).Result;
 
-            Assert.AreEqual(MovieResult.GoodMovie, result);
+            Assert.AreEqual(MovieResult.BadMovie, result);
         }
     }
 }
